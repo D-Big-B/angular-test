@@ -1,0 +1,22 @@
+<h4>List of Store Categories</h4>
+<table [ngStyle]="{ width: '90%', marginLeft: '5%' }">
+  <tr>
+    <th>Category ID</th>
+    <th>Description</th>
+    <th>Picture</th>
+  </tr>
+  <tr *ngFor="let categoryInfo of categoriesInfo">
+    <td [ngStyle]="{ backgroundColor: 'lightpink' }">
+      {{ categoryInfo.catid }}
+    </td>
+    <td [ngStyle]="{ backgroundColor: 'wheat' }">
+      {{ categoryInfo.description }}
+    </td>
+    <td [ngStyle]="{ backgroundColor: 'lightgreen' }">
+      <img
+        src="./../../../../assets/images/{{ categoryInfo.catimg }}"
+        [ngStyle]="{ width: '50px' }"
+      />
+    </td>
+  </tr>
+</table>

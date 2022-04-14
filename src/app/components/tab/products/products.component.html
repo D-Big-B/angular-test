@@ -1,0 +1,28 @@
+<h4>Click a category button to view items for that particular category</h4>
+<mat-grid-list cols="{{ categoriesInfo.length }}">
+  <mat-grid-tile *ngFor="let categoryInfo of categoriesInfo">
+    <button
+      [ngStyle]="{
+        backgroundColor: 'yellow',
+        border: 'none',
+        borderRadius: '50%'
+      }"
+      (click)="categorySelect(categoryInfo.catid)"
+    >
+      <img
+        src="./../../../../assets/images/{{ categoryInfo.catimg }}"
+        [ngStyle]="{ width: '40px' }"
+      />
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<div *ngFor="let productInfo of productsInfo">
+  <div *ngIf="productInfo.catid === selectedCategoryIndex">
+    <h5>Product ID : {{ productInfo.ProductID }}</h5>
+    <div>Name : {{ productInfo.Name }}</div>
+    <div>Price : ${{ productInfo.Price }}</div>
+    <div>Brand : {{ productInfo.Brand }} / Color: {{ productInfo.Color }}</div>
+    <hr />
+  </div>
+</div>

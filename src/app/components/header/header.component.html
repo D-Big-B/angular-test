@@ -1,0 +1,15 @@
+<header>
+  <h4>{{ companyInfo.companyName }}</h4>
+  <p>Click the button to view more company info</p>
+  <button mat-raised-button (click)="togglePopUp()">ME</button>
+</header>
+<div class="dialogPopUp" *ngIf="showPopUp">
+  <h3>{{ companyInfo.companyName }}</h3>
+  <h4>Contact: {{ companyInfo.companyEmail }}</h4>
+  <h4>TaxCode: {{ companyInfo.companyTaxCode }}</h4>
+  <img
+    src="./../../../assets/images/{{ companyInfo.companyPhoto }}"
+    [ngStyle]="{ width: '80px' }"
+  />
+  <button mat-raised-button (click)="togglePopUp()">OK</button>
+</div>

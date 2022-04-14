@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "usernameA4": {
+    "choudhviA4": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -22,11 +22,9 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -68,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "usernameA4:build:production"
+              "browserTarget": "choudhviA4:build:production"
             },
             "development": {
-              "browserTarget": "usernameA4:build:development"
+              "browserTarget": "choudhviA4:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "usernameA4:build"
+            "browserTarget": "choudhviA4:build"
           }
         },
         "test": {
@@ -89,11 +87,9 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -102,5 +98,5 @@
       }
     }
   },
-  "defaultProject": "usernameA4"
+  "defaultProject": "choudhviA4"
 }
